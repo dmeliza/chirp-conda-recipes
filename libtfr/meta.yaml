@@ -1,0 +1,52 @@
+package:
+  name: libtfr
+  version: !!str 1.0.4
+
+source:
+  fn: libtfr-1.0.4.tar.gz
+  url: https://pypi.python.org/packages/source/l/libtfr/libtfr-1.0.4.tar.gz
+  md5: c52dd79c53fca925ed9ce026e96c2ff7
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  #preserve_egg_dir: True
+  #entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - libtfr = libtfr:main
+    #
+    # Would create an entry point called libtfr that calls libtfr.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - fftw
+
+  run:
+    - python
+    - numpy
+    - fftw
+
+test:
+  # Python imports
+  imports:
+    - libtfr
+
+about:
+  home: http://melizalab.github.com/libtfr
+  license: GPL
+  summary: 'Calculates multi-taper windowed and time-frequency reassignment spectrograms'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

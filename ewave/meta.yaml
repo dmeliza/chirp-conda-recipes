@@ -1,0 +1,34 @@
+package:
+  name: ewave
+  version: !!str 1.0.4
+
+source:
+  fn: ewave-1.0.4.tar.gz
+  url: https://pypi.python.org/packages/source/e/ewave/ewave-1.0.4.tar.gz
+  md5: a7523037f67a1e73bf5a42c6759a2f5a
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - ewave
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+
+about:
+  home: https://github.com/melizalab/py-ewave
+  license: Python Software Foundation License
+  summary: 'Extended WAVE I/O'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
